@@ -1,9 +1,9 @@
-var http = require('http');
+const http = require('http')
+const fs = require('fs')
 
-function onRequest(request, response) {
-    response.writeHead(200, {'Content-Type': 'text/plain'});
-    response.write('Hello World DOED TEST');
-    response.end();
-}
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'content-type': 'text/html' })
+  fs.createReadStream('index.html').pipe(res)
+})
 
-http.createServer(onRequest).listen(8080);
+server.listen(process.env.PORT || 8080)
