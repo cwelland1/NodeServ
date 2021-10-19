@@ -52,12 +52,8 @@
     
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
-      <h1 class="display-3">DOED Digital Signature System</h1>
-      <!-- <a href="/static/pdf-test.pdf">Click here to see the pdf</a> -->
-      <p class="lead">From this page you can access Docusigns capabilities through API calls</p>
-      <a href="http://127.0.0.1:5000/Doc" class="btn btn-primary btn-lg">Document Management</a>
-      &nbsp;&nbsp 
-      <a href="http://127.0.0.1:5000/Sign" class="btn btn-primary btn-lg">Digital Signature</a>
+      <h1 class="display-3">Enter Correspondence</h1>
+    
     </header>
 
     <!-- Page Features -->
@@ -66,7 +62,15 @@
 
   </div>
   <!-- /.container -->
-
+      <div class="container">
+     <form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+    </div>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
